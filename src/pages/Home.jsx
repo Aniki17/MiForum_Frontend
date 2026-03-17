@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Post from "./Post";
+import Post from "../components/Post";
+
 
 function Home() {
   const [posts, setPosts] = useState([]);
@@ -27,6 +28,7 @@ function Home() {
       {posts.map(post => (
         <Post
           key={post.id}
+          id = {post.id}
           title={post.title}
           content={post.content}
           author={post.user_id} 
